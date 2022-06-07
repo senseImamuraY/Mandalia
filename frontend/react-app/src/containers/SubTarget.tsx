@@ -1,9 +1,7 @@
 import React from 'react'
 
-const SubTarget = () => {
+export const SubTargets = () => {
   return (
     <div>SubTarget</div>
   )
 }
-
-export default SubTarget
