@@ -2,25 +2,31 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { BrowserRouter, Routes, Route, useParams, Link } from "react-router-dom";
+
+import { Users } from "./containers/User";
+import { MainTargets } from "./containers/MainTarget";
+import { SubTargets } from "./containers/SubTarget";
+import PrimaryButton from './components/atoms/button/PrimaryButton';
+import SecondaryButton from './components/atoms/button/SecondaryButton';
+
+
 function App() {
+  const { userId } = useParams();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-          ダンガンロンパ
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <PrimaryButton>logM=B</PrimaryButton>
+    <SecondaryButton>logM=B</SecondaryButton>
+      <BrowserRouter>
+        <Link to="users/:usersId">aaa</Link>
+        <Routes>
+          {/* <Route path="/" element={<Home />}/> */}
+          <Route path="users/:usersId" element={<Users />} />
+          <Route path="main_targets" element={<MainTargets />}/>
+          <Route path="sub_targets" element={<SubTargets />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MainTarget = () => {
+export const MainTargets = () => {
   return (
     <div>MainTarget</div>
   )
 }
 
-export default MainTarget
+// export default MainTargets
