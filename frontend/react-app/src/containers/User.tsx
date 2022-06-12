@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import { FetchUser } from '../apis/users';
+import { FetchUser } from '../lib/api/users';
 import { initialState, usersActionTypes, usersReducer } from '../reducers/users';
 
 
