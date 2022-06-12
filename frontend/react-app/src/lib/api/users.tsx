@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { usersShow } from "../urls/index";
+import { usersShow } from "../../urls/index";
 import { useParams } from "react-router-dom";
 
 const options: AxiosRequestConfig ={
